@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Assem1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00138412988892166 -0.233947694200955 0.086447759587498"
+        rpy="0 0 0" />
+      <mass
+        value="0.212718644749271" />
+      <inertia
+        ixx="0.000468307672361224"
+        ixy="-7.90615897498573E-10"
+        ixz="-2.72097649438798E-05"
+        iyy="0.000473440858649474"
+        iyz="-1.77706072479913E-09"
+        izz="0.000156068332696657" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_Link">
+    <inertial>
+      <origin
+        xyz="-2.27165451396026E-06 9.99271376754193E-07 -0.0148791788242376"
+        rpy="0 0 0" />
+      <mass
+        value="0.0376948230262005" />
+      <inertia
+        ixx="3.0970610652425E-06"
+        ixy="9.0253844933679E-11"
+        ixz="8.03810931836072E-10"
+        iyy="3.09724580846862E-06"
+        iyz="-3.53660389656641E-10"
+        izz="5.34878410103065E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/front_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/front_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_joint"
+    type="continuous">
+    <origin
+      xyz="-0.00404950262649333 -0.132105823252763 0.013307001497799"
+      rpy="-1.57079632679488 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="left_Link">
+    <inertial>
+      <origin
+        xyz="-1.56660067981984E-06 -1.92476766305502E-06 -0.0127208211603687"
+        rpy="0 0 0" />
+      <mass
+        value="0.0376948231806095" />
+      <inertia
+        ixx="3.0970902966984E-06"
+        ixy="-6.31823673559827E-11"
+        ixz="-5.54316275714863E-10"
+        iyy="3.09709294491525E-06"
+        iyz="-6.81131430316285E-10"
+        izz="5.34866048693013E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/left_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/left_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0925760232167772 -0.282329162453783 0.0209263985394864"
+      rpy="1.49527817360993 -0.131724426585819 -1.04816512172391" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="right_Link">
+    <inertial>
+      <origin
+        xyz="-2.45029280787623E-06 -3.93729776879126E-07 -0.0127208212275807"
+        rpy="0 0 0" />
+      <mass
+        value="0.0376948233263364" />
+      <inertia
+        ixx="3.09712511369975E-06"
+        ixy="3.61541755318194E-11"
+        ixz="-8.67065222721518E-10"
+        iyy="3.09706580134537E-06"
+        iyz="-1.39372238878642E-10"
+        izz="5.34866814999537E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/right_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/right_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint"
+    type="continuous">
+    <origin
+      xyz="0.0814995964484913 -0.284509931547859 0.00594386841558721"
+      rpy="1.64514555347933 -0.122670734776094 1.02398056831871" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="arm1_Link">
+    <inertial>
+      <origin
+        xyz="6.07153216591882E-18 0.0251509254923845 -0.00869949806228582"
+        rpy="0 0 0" />
+      <mass
+        value="0.0420074696165442" />
+      <inertia
+        ixx="3.92690065728655E-05"
+        ixy="-3.19585442309E-21"
+        ixz="6.20769865749185E-22"
+        iyy="6.44311567787378E-06"
+        iyz="-1.87122821944549E-08"
+        izz="4.27850096860371E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/arm1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/arm1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm1_joint"
+    type="prismatic">
+    <origin
+      xyz="0.0129942408668358 -0.235222572309918 0.221414479437715"
+      rpy="0 0.0858574993068488 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="arm1_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm2_Link">
+    <inertial>
+      <origin
+        xyz="-0.0219117692224897 0.0449779576804024 3.36284280196275E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0315426372720138" />
+      <inertia
+        ixx="3.05694213575924E-05"
+        ixy="1.31480071425889E-05"
+        ixz="2.25748474704743E-09"
+        iyy="9.9859787189301E-06"
+        iyz="-4.63390483834162E-09"
+        izz="3.98214760721726E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/arm2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/arm2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm2_joint"
+    type="continuous">
+    <origin
+      xyz="0.0183657404078357 -0.174985991062 0.226924157165142"
+      rpy="0 0.0858574993068487 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="arm2_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="camera_Link">
+    <inertial>
+      <origin
+        xyz="0.0405947911550804 0.114125436121511 0.00982297718804185"
+        rpy="0 0 0" />
+      <mass
+        value="3.31415926535897E-05" />
+      <inertia
+        ixx="1.54781744202722E-10"
+        ixy="-1.41665821091332E-12"
+        ixz="-1.21930482632803E-13"
+        iyy="9.61939980391518E-11"
+        iyz="2.28875449289258E-12"
+        izz="6.97989279465885E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/camera_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/camera_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_point"
+    type="fixed">
+    <origin
+      xyz="-0.00602607771704599 -0.23298245758515 0.000429061089290164"
+      rpy="1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_Link">
+    <inertial>
+      <origin
+        xyz="0.00179409767529698 0.085299684697352 0.00834566811277871"
+        rpy="0 0 0" />
+      <mass
+        value="0.146695752131392" />
+      <inertia
+        ixx="6.22721120792819E-05"
+        ixy="1.87963155913411E-05"
+        ixz="1.6177817726973E-06"
+        iyy="0.000125564806936655"
+        iyz="1.36770749501304E-06"
+        izz="0.000109791714930023" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/lidar_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/lidar_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_point"
+    type="continuous">
+    <origin
+      xyz="-0.00602607771704599 -0.23298245758515 0.000429061089290164"
+      rpy="0 0 1.5" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  
+  <gazebo reference="lidar_Link"> <!-- Tham chiếu đến liên kết (link) có tên là "lidar_link" trong mô hình URDF/SDF -->
+   <material>Gazebo/FlatBlack</material> <!-- Thiết lập vật liệu hiển thị trong Gazebo là màu đen phẳng (FlatBlack) -->
+   
+   <sensor type="ray" name="head_rplidar_sensor"> <!-- Khai báo cảm biến loại "ray" (tia quét) với tên là "head_rplidar_sensor" -->
+      <pose>0 0 0 0 0 0</pose> <!-- Xác định vị trí và hướng của cảm biến trong hệ tọa độ của "lidar_link" (x, y, z, roll, pitch, yaw) -->
+      <visualize>true</visualize> <!-- Cho phép hiển thị cảm biến trong giao diện Gazebo -->
+      <update_rate>30.0</update_rate> <!-- Tần số cập nhật cảm biến là 30 lần mỗi giây (30 Hz) -->
+      
+      <ray> <!-- Bắt đầu cấu hình cho cảm biến tia quét -->
+         <scan> <!-- Xác định thông số quét của cảm biến -->
+            <horizontal> <!-- Cài đặt cho quét theo phương ngang -->
+               <samples>50</samples> <!-- Số lượng tia quét trong mỗi vòng quét (50 tia) -->
+               <resolution>1</resolution> <!-- Độ phân giải góc, mỗi tia quét sẽ có giá trị riêng lẻ (1: không nội suy giữa các tia) -->
+               <min_angle>0.0</min_angle> <!-- Góc quét tối thiểu theo radian (0 rad, tương ứng 0 độ) -->
+               <max_angle>6.28319</max_angle> <!-- Góc quét tối đa theo radian (~6.28319 rad, tương ứng 360 độ) -->
+            </horizontal> <!-- Kết thúc phần cấu hình quét ngang -->
+         </scan> <!-- Kết thúc phần thông số quét -->
+         
+         <range> <!-- Thiết lập phạm vi đo lường của cảm biến -->
+            <min>0.120</min> <!-- Khoảng cách đo tối thiểu là 0.12 m (12 cm) -->
+            <max>10</max> <!-- Khoảng cách đo tối đa là 10 m -->
+            <resolution>0.015</resolution> <!-- Độ phân giải của khoảng cách là 0.015 m (15 mm) -->
+         </range> <!-- Kết thúc phần thiết lập phạm vi -->
+      </ray> <!-- Kết thúc phần cấu hình cảm biến tia quét -->
+      
+      <plugin name="gazebo_ros_head_rplidar_controller" filename="libgazebo_ros_laser.so"> <!-- Khai báo plugin ROS cho cảm biến lidar -->
+         <topicName>scan</topicName> <!-- Dữ liệu quét của Lidar sẽ được xuất bản lên topic ROS có tên "scan" -->
+         <frameName>lidar_Link</frameName> <!-- Tên khung tọa độ (frame) của cảm biến là "lidar_link" -->
+         <gaussianNoise>0.01</gaussianNoise> <!-- Mức độ nhiễu Gaussian (nhiễu ngẫu nhiên) là 0.01 -->
+      </plugin> <!-- Kết thúc phần cấu hình plugin ROS -->
+   </sensor> <!-- Kết thúc phần cấu hình cảm biến -->
+</gazebo> 
+
+<!-- Plugin Camera -->
+<gazebo reference="camera_link">  <!-- Gắn cảm biến vào liên kết (link) có tên 'camera_link' -->
+  <sensor type="camera" name="camera_sensor"> <!-- Khai báo một cảm biến loại camera với tên 'camera_sensor' -->
+    
+    <update_rate>30</update_rate> <!-- Tần suất cập nhật của camera là 30 Hz (30 khung hình/giây) -->
+    
+    <camera> <!-- Bắt đầu cấu hình các thông số cho camera -->
+      
+      <horizontal_fov>1.3962634</horizontal_fov> <!-- Góc nhìn ngang (Field of View) là 1.3962634 rad (~80 độ) -->
+      
+      <image> <!-- Cài đặt thông số ảnh mà camera chụp được -->
+        <width>640</width> <!-- Chiều rộng ảnh là 640 pixel -->
+        <height>480</height> <!-- Chiều cao ảnh là 480 pixel -->
+        <format>R8G8B8</format> <!-- Định dạng ảnh là RGB (8-bit cho mỗi kênh màu: đỏ, lục, lam) -->
+      </image>
+      
+    </camera> <!-- Kết thúc cấu hình camera -->
+    
+    <!-- Cấu hình plugin ROS cho camera -->
+    <plugin name="camera_controller" filename="libgazebo_ros_camera.so"> 
+      <!-- 'name' là tên plugin, 'filename' là file thư viện động (.so) giúp camera giao tiếp với ROS -->
+      
+      <alwaysOn>true</alwaysOn> <!-- Camera luôn hoạt động (không bị tắt khi không cần thiết) -->
+      
+      <updateRate>30.0</updateRate> <!-- Tần suất gửi dữ liệu hình ảnh là 30 Hz -->
+      
+      <cameraName>my_camera</cameraName> <!-- Tên camera được sử dụng trong ROS -->
+      
+      <frameName>camera_Link</frameName> <!-- Tên frame (hệ tọa độ) gắn với camera -->
+      
+      <imageTopicName>/camera/image_raw</imageTopicName> <!-- Topic ROS phát hình ảnh thô (raw image) -->
+      
+      <cameraInfoTopicName>/camera/camera_info</cameraInfoTopicName> <!-- Topic ROS phát thông tin hiệu chỉnh camera -->
+      
+    </plugin> <!-- Kết thúc cấu hình plugin ROS -->
+    
+    <pose>0 0 0 0 0 0</pose> <!-- Vị trí và hướng của camera so với 'camera_link':
+                                (x, y, z, roll, pitch, yaw) = (0, 0, 0, 0, 0, 0) -->
+  </sensor> <!-- Kết thúc khai báo cảm biến camera -->
+</gazebo> <!-- Kết thúc cấu hình cho Gazebo -->
+<gazebo> 
+  <!-- Bắt đầu khai báo cấu hình cho Gazebo -->
+  
+  <plugin name="gps_plugin" filename="libhector_gazebo_ros_gps.so"> 
+    <!-- Khai báo plugin GPS sử dụng thư viện "libhector_gazebo_ros_gps.so" -->
+    
+    <alwaysOn>true</alwaysOn> 
+    <!-- Luôn kích hoạt plugin GPS, ngay cả khi không có client nào subscribe -->
+
+    <updateRate>10.0</updateRate> 
+    <!-- Tần suất cập nhật dữ liệu GPS là 10 Hz (10 lần/giây) -->
+
+    <bodyName>base_link</bodyName> 
+    <!-- Xác định liên kết (link) mà cảm biến GPS gắn vào (ở đây là "base_link") -->
+    
+    <topicName>/gps/fix</topicName> 
+    <!-- Tên topic ROS xuất ra dữ liệu vị trí GPS (kiểu sensor_msgs/NavSatFix) -->
+
+    <velocityTopicName>/gps/fix_velocity</velocityTopicName> 
+    <!-- Tên topic ROS xuất ra dữ liệu vận tốc (kiểu geometry_msgs/Vector3Stamped) -->
+    
+    <referenceLatitude>21.028511</referenceLatitude> 
+    <!-- Giá trị vĩ độ gốc (ở đây là 21.028511 - tọa độ ở Hà Nội, Việt Nam) -->
+    
+    <referenceLongitude>105.804817</referenceLongitude> 
+    <!-- Giá trị kinh độ gốc (ở đây là 105.804817 - tọa độ ở Hà Nội, Việt Nam) -->
+
+    <referenceAltitude>10.0</referenceAltitude> 
+    <!-- Độ cao gốc so với mực nước biển (10 mét) -->
+
+    <drift>0.001 0.001 0.001</drift> 
+    <!-- Mô phỏng độ lệch (trôi) của tín hiệu GPS theo các trục X, Y, Z (đơn vị: mét) -->
+
+    <gaussianNoise>0.05 0.05 0.05</gaussianNoise> 
+    <!-- Mô phỏng nhiễu Gauss (ngẫu nhiên) trên các trục X, Y, Z (đơn vị: mét) -->
+    
+  </plugin> 
+  <!-- Kết thúc khai báo plugin GPS -->
+  
+</gazebo> 
+<!-- Kết thúc phần cấu hình cho Gazebo -->
+
+</robot>
