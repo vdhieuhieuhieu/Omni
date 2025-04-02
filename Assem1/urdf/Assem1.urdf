@@ -454,46 +454,7 @@
    </sensor> <!-- Kết thúc phần cấu hình cảm biến -->
 </gazebo> 
 
-<!-- Plugin Camera -->
-<gazebo reference="camera_link">  <!-- Gắn cảm biến vào liên kết (link) có tên 'camera_link' -->
-  <sensor type="camera" name="camera_sensor"> <!-- Khai báo một cảm biến loại camera với tên 'camera_sensor' -->
-    
-    <update_rate>30</update_rate> <!-- Tần suất cập nhật của camera là 30 Hz (30 khung hình/giây) -->
-    
-    <camera> <!-- Bắt đầu cấu hình các thông số cho camera -->
-      
-      <horizontal_fov>1.3962634</horizontal_fov> <!-- Góc nhìn ngang (Field of View) là 1.3962634 rad (~80 độ) -->
-      
-      <image> <!-- Cài đặt thông số ảnh mà camera chụp được -->
-        <width>640</width> <!-- Chiều rộng ảnh là 640 pixel -->
-        <height>480</height> <!-- Chiều cao ảnh là 480 pixel -->
-        <format>R8G8B8</format> <!-- Định dạng ảnh là RGB (8-bit cho mỗi kênh màu: đỏ, lục, lam) -->
-      </image>
-      
-    </camera> <!-- Kết thúc cấu hình camera -->
-    
-    <!-- Cấu hình plugin ROS cho camera -->
-    <plugin name="camera_controller" filename="libgazebo_ros_camera.so"> 
-      <!-- 'name' là tên plugin, 'filename' là file thư viện động (.so) giúp camera giao tiếp với ROS -->
-      
-      <alwaysOn>true</alwaysOn> <!-- Camera luôn hoạt động (không bị tắt khi không cần thiết) -->
-      
-      <updateRate>30.0</updateRate> <!-- Tần suất gửi dữ liệu hình ảnh là 30 Hz -->
-      
-      <cameraName>my_camera</cameraName> <!-- Tên camera được sử dụng trong ROS -->
-      
-      <frameName>camera_Link</frameName> <!-- Tên frame (hệ tọa độ) gắn với camera -->
-      
-      <imageTopicName>/camera/image_raw</imageTopicName> <!-- Topic ROS phát hình ảnh thô (raw image) -->
-      
-      <cameraInfoTopicName>/camera/camera_info</cameraInfoTopicName> <!-- Topic ROS phát thông tin hiệu chỉnh camera -->
-      
-    </plugin> <!-- Kết thúc cấu hình plugin ROS -->
-    
-    <pose>0 0 0 0 0 0</pose> <!-- Vị trí và hướng của camera so với 'camera_link':
-                                (x, y, z, roll, pitch, yaw) = (0, 0, 0, 0, 0, 0) -->
-  </sensor> <!-- Kết thúc khai báo cảm biến camera -->
-</gazebo> <!-- Kết thúc cấu hình cho Gazebo -->
+
 <gazebo> 
   <!-- Bắt đầu khai báo cấu hình cho Gazebo -->
   
@@ -535,5 +496,23 @@
   
 </gazebo> 
 <!-- Kết thúc phần cấu hình cho Gazebo -->
+
+    </camera>
+            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                <alwaysOn>true</alwaysOn>
+                <updateRate>0.0</updateRate>
+                <cameraName>camera_pi</cameraName>
+                <imageTopicName>image_raw</imageTopicName>
+                <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+                <frameName>camera_Link</frameName>
+                <hackBaseline>0.07</hackBaseline>
+                <distortionK1>0.0</distortionK1>
+                <distortionK2>0.0</distortionK2>
+                <distortionK3>0.0</distortionK3>
+                <distortionT1>0.0</distortionT1>
+                <distortionT2>0.0</distortionT2>
+            </plugin>
+        </sensor>
+    </gazebo>
 
 </robot>
