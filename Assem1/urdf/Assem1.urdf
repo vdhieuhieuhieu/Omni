@@ -3,7 +3,7 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="Assem1">
+  name="Assem1">z
   <link
     name="base_link">
     <inertial>
@@ -535,5 +535,49 @@
   
 </gazebo> 
 <!-- Kết thúc phần cấu hình cho Gazebo -->
+
+<gazebo>
+  <plugin name="omni_drive_controller" filename="libgazebo_ros_planar_move.so">
+    <!-- ROS namespace và remap topic -->
+    <ros>
+      <namespace>/</namespace> <!-- Namespace mặc định -->
+      <remap from="cmd_vel" to="/cmd_vel"/> <!-- Remap topic cmd_vel -->
+      <remapping>odom:=/odom</remapping>
+      <rosDebugLevel>INFO</rosDebugLevel> <!-- Mức log -->
+    </ros>
+
+    <!-- Các thông số động học -->
+    <robotBaseFrame>base_link</robotBaseFrame> <!-- Khung gốc robot -->
+    <odometryFrame>odom</odometryFrame> <!-- Khung odometry -->
+    
+    <commandTopic>/cmd_vel</commandTopic> <!-- Nhận lệnh vận tốc -->
+    <odometryTopic>/odom</odometryTopic> <!-- Xuất dữ liệu odometry -->
+
+    <!-- Chế độ xuất dữ liệu -->
+    <publishOdom>true</publishOdom>
+    <publishOdomTF>true</publishOdomTF>
+
+    <!-- Tốc độ cập nhật plugin -->
+    <updateRate>50</updateRate> 
+
+    <!-- Cấu hình kiểu bánh xe omni -->
+    <wheelType>omni</wheelType> 
+
+    <!-- Khai báo joint của các bánh xe -->
+    <wheel> 
+      <joint>left_joint</joint> <!-- Joint bánh xe trái -->
+      <joint>right_joint</joint> <!-- Joint bánh xe phải -->
+      <joint>front_joint</joint> <!-- Joint bánh xe sau -->
+    </wheel>
+
+    <!-- Thông số bánh xe -->
+    <wheelSeparation>0.2</wheelSeparation> <!-- Khoảng cách giữa bánh trái & phải -->
+    <wheelRadius>0.035</wheelRadius> <!-- Bán kính bánh xe -->
+    <wheelTorque>10</wheelTorque> <!-- Mô-men xoắn tối đa -->
+    <velocityDecay>0.1</velocityDecay> <!-- Giảm trượt bánh -->
+  </plugin>
+</gazebo>
+
+
 
 </robot>
